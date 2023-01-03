@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1b1a17;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 3fr;
+  row-gap: 16px;
+  column-gap: 33px;
+  margin-top: 16px;
+}
+
+.menu div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+button,
+input {
+  background: #30302f;
+  border: 2px solid #30302f;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 10px;
+  font-family: inherit;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  color: rgb(214, 214, 214);
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.maze {
+  display: grid;
+  background: #1b1a17;
+  /* #E6D5B8; */
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+}
+
+.cell.clear {
+  background: #1b1a17;
+}
+
+.cell.wall {
+  background: #e6d5b8;
+}
+
+.cell.start {
+  background: #f0a500;
+}
+
+.cell.end {
+  background: #e45826;
+}
+
+.cell.traversed {
+  background: #11468f;
+  margin: 6px;
+}
